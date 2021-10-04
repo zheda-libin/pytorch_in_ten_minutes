@@ -128,4 +128,37 @@ children遍历：[1, 2], 3, 4
 module遍历：[[1, 2], 3, 4], [1, 2], 1, 2, 3, 4
 
 
+### 9. 计算模型参数大小
+
+```python
+import torch
+
+a = torch.randn(1, 2, 3, 4, 5)
+torch.numel(a)
+# return 120
+```
+
+### 10. rand和randn有什么区别
+
+rand是均匀分布，而randn是标准正态分布。
+
+
+### 11. 关于新建变量
+
+1. torch.tensor()，永远都会拷贝数据。某种程度比较像torch.copy，如果你需要避免拷贝，那么可以使用detach。
+
+### 12. 有哪些indexing
+
+cat
+
+chunk
+
+gather
+
+index_select
+
+masked_select
+
+
+
 
